@@ -6,9 +6,6 @@
 import requests
 import pandas
 import json
-import re
-import unidecode
-from json2html import *
 
 Token =  Some token
 user = 'bccheung-galvanize'
