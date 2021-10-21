@@ -1,0 +1,28 @@
+# This is a sample Python script.
+
+# Press Shift+F10 to execute it or replace it with your code.
+# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+
+import requests
+import pandas
+import json
+import re
+import unidecode
+from json2html import *
+
+Token =  Some token
+user = 'bccheung-galvanize'
+
+header = {'User-Agent': 'SF-Demo', 'Content-Type' : 'application/vnd.api+json'}
+
+uri =  "https://api.github.com/users/bccheung-galvanize"
+
+def data_pull(uri,  header = {}):
+    response = requests.get(uri,headers=header, auth=('bccheung-galvanize','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'))
+    requests_json = response.json()
+
+
+New_Data = data_pull(uri,  header)
+
+print(New_Data.dtypes)
+print(New_Data.head)
